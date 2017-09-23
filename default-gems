@@ -1,5 +1,7 @@
 bundler
 rubocop
+scss_lint
+haml_lint
 rspec
 overcommit
 yard
