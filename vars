@@ -1,4 +1,21 @@
+# [Make sure these variables are set]
+XDG_DATA_HOME?=$HOME/.local/share
+XDG_CONFIG_HOME?=$HOME/.config
+XDG_CACHE_HOME?=$HOME/.cache
+
+# [RubyGems]
+GEMRC=$XDG_CONFIG_HOME/gem/config.yml
 GEM_SPEC_CACHE=$XDG_CACHE_HOME/gem
+
+# [REPL specific stuff]
 PRYRC=$XDG_CONFIG_HOME/pry/config.rb
 IRBRC=$XDG_CONFIG_HOME/ruby/irbrc
+
+# [Ruby Build]
 RUBY_BUILD_CACHE_PATH=$XDG_CACHE_HOME/ruby-build
+
+# [Bundler]
+BUNDLE_USER_HOME=$XDG_DATA_HOME/bundler
+BUNDLE_USER_CACHE=$XDG_CACHE_HOME/bundler
+BUNDLE_USER_CONFIG=$XDG_CONFIG_HOME/bundler
+BUNDLE_USER_PLUGIN=$XDG_DATA_HOME/bundler/plugin
