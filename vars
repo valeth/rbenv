@@ -15,7 +15,9 @@ IRBRC=$XDG_CONFIG_HOME/ruby/irbrc
 RUBY_BUILD_CACHE_PATH=$XDG_CACHE_HOME/ruby-build
 
 # [Bundler]
-BUNDLE_USER_HOME=$XDG_DATA_HOME/bundler
+# Directory for bundler cache data
 BUNDLE_USER_CACHE=$XDG_CACHE_HOME/bundler
-BUNDLE_USER_CONFIG=$XDG_CONFIG_HOME/bundler
+# Main configuration file
+BUNDLE_USER_CONFIG=$XDG_CONFIG_HOME/bundler/config
+BUNDLE_USER_HOME=$XDG_DATA_HOME/bundler
 BUNDLE_USER_PLUGIN=$XDG_DATA_HOME/bundler/plugin
