@@ -43,17 +43,18 @@ OUT
   assert_success "sh"
 }
 
-@test "setup shell completions (fish)" {
+@test "skip shell completions (fish)" {
   root="$(cd $BATS_TEST_DIRNAME/.. && pwd)"
   run rbenv-init - fish
   assert_success
-  assert_line "source '${root}/test/../libexec/../completions/rbenv.fish'"
+  local line="$(grep '^source' <<<"$output")"
+  [ -z "$line" ] || flunk "did not expect line: $line"
 }
 
 @test "fish instructions" {
   run rbenv-init fish
   assert [ "$status" -eq 1 ]
-  assert_line 'status --is-interactive; and source (rbenv init -|psub)'
+  assert_line 'status --is-interactive; and rbenv init - | source'
 }
 
 @test "option to skip rehash" {
